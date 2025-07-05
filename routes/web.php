@@ -10,3 +10,7 @@ Route::get('/about', function(){
     echo "About us";
 
 });
+Route::get('/testebranch', function(){
+    echo "Testando branch";
+
+});

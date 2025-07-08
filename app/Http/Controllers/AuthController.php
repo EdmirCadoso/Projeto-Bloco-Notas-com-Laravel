@@ -13,11 +13,6 @@ class AuthController extends Controller
         return view('login');
     }
 
-    public function logout()
-    {
-        echo 'logout';
-    }
-
      public function loginSubmit(Request $request)
     {
 
@@ -78,5 +73,12 @@ class AuthController extends Controller
         echo 'LOGIN COM SUCESSO!';
         //print_r($user);
 
+    }
+
+      public function logout()
+    {
+        //logout from the apllication
+        session()->forget('user');
+        return redirect()->to('/login');
     }
 }
